@@ -1,7 +1,7 @@
 {
   "name": "@visibuild/yarn-plugin-info-enhanced",
   "description": "Enhanced info command for Yarn, based on the original",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Dave Allie <dave@visibuild.com.au>",
   "license": "MIT",
   "dependencies": {
