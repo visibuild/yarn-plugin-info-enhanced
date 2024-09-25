@@ -286,7 +286,8 @@ export class InfoEnhancedCommand extends BaseCommand {
           (pkg) =>
             matchers.length === 0 || matchers.some((matcher) => matcher(pkg)),
         )
-        .filter((pkg) => !noConditions || !!pkg.conditions);
+        // not filtering or no conditions on the package
+        .filter((pkg) => !noConditions || !pkg.conditions);
 
       return { selection, sortedLookup };
     };
