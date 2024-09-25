@@ -1,0 +1,25 @@
+{
+  "name": "@visibuild/yarn-plugin-info-enhanced",
+  "description": "Enhanced info command for Yarn, based on the original",
+  "version": "0.1.0",
+  "author": "Dave Allie <dave@visibuild.com.au>",
+  "license": "MIT",
+  "dependencies": {
+    "@yarnpkg/cli": "^4.4.1",
+    "@yarnpkg/core": "^4.1.2",
+    "clipanion": "^4.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@yarnpkg/builder": "^4.2.0",
+    "prettier": "^3.3.3",
+    "rimraf": "5.0.0",
+    "typescript": "^5.6.2"
+  },
+  "scripts": {
+    "build": "builder build plugin",
+    "build:dev": "builder build plugin --no-minify",
+    "clean": "rimraf bundles"
+  },
+  "packageManager": "yarn@4.5.0"
+}
