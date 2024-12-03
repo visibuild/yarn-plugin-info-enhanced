@@ -127,10 +127,18 @@ export class InfoEnhancedCommand extends BaseCommand {
         if (seen.has(hash)) continue;
 
         const pkg = project.storedPackages.get(hash);
-        if (typeof pkg === `undefined`)
-          throw new Error(
-            `Assertion failed: Expected the package to be registered`,
+        // TODO: This branch can be hit if the package is aliased, in that case
+        //       we should throw or find the real package, but for now, we're
+        //       just going to log the error and continue.
+        if (typeof pkg === `undefined`) {
+          console.error(
+            new Error(
+              `Assertion failed: Expected the package to be registered`,
+            ),
           );
+
+          continue;
+        }
 
         seen.set(hash, pkg);
 
