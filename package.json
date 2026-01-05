@@ -5,16 +5,16 @@
   "author": "Dave Allie <dave@visibuild.com.au>",
   "license": "MIT",
   "dependencies": {
-    "@yarnpkg/cli": "^4.4.1",
-    "@yarnpkg/core": "^4.1.2",
-    "clipanion": "^4.0.0-rc.2"
+    "@yarnpkg/cli": "^4.12.0",
+    "@yarnpkg/core": "^4.5.0",
+    "clipanion": "^4.0.0-rc.4"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@yarnpkg/builder": "^4.2.0",
-    "prettier": "^3.3.3",
-    "rimraf": "5.0.0",
-    "typescript": "^5.6.2"
+    "@types/node": "^24.10.4",
+    "@yarnpkg/builder": "^4.2.3",
+    "prettier": "^3.7.4",
+    "rimraf": "6.1.2",
+    "typescript": "^5.9.3"
   },
   "scripts": {
     "preversion": "yarn lint && yarn build",
@@ -24,5 +24,5 @@
     "clean": "rimraf bundles",
     "lint": "prettier --check ."
   },
-  "packageManager": "yarn@4.5.0"
+  "packageManager": "yarn@4.12.0"
 }
